@@ -2,21 +2,41 @@
 const container = document.querySelector(".container")
 const gridBtn = document.querySelector(".btn")
 
-function makeRows(rows, cols) {
+
+
+
+
+gridBtn.addEventListener("click", (e) => {
+    function makeRows(rows, cols) {
    
-    for ( i = 0; i < (rows * cols); i++) {
-        let cell = document.createElement("div");
-        cell.innerHTML = (i + 1);
-        container.appendChild(cell).className = "grid-items";
-    };
-
-    gridBtn.addEventListener("click", (e) => {
         
+       };
+       let promptValue = Number(prompt("Enter a size for your grid:"));
+       for (i = 0; i < (promptValue * promptValue); i++) {
+        let cell = document.createElement("div");
+        container.appendChild(cell).className = "grid-items";
+        makeRows(promptValue);
+       }
+       
+       
+      
     })
-};
+    
 
 
 
 
-makeRows(16, 16)
+
+// function grid() {
+ 
+    
+// }
+
+
+
+
+
+
+
+
 
