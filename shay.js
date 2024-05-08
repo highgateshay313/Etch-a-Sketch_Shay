@@ -1,6 +1,7 @@
 
 const container = document.querySelector(".container")
 const gridBtn = document.querySelector(".btn")
+let gridFlow = document.querySelectorAll(".grid-items")
 
 
 
@@ -9,21 +10,37 @@ const gridBtn = document.querySelector(".btn")
 gridBtn.addEventListener("click", (e) => {
     
         let promptValue = Number(prompt("Enter a size for your grid:"));
-       for (i = 0; i < (promptValue * promptValue); i++) {
+        for (i = 0; i < (promptValue * promptValue); i++) {
         let cell = document.createElement("div");
+
+        if (promptValue < 0) {
+            promptValue = 0
+        }
+
+        if (promptValue > 100) {
+            promptValue = 100
+        }
+
+        cell.addEventListener("mousemove", () => {
+            cell.style.backgroundColor = "purple"
+        })
+        cell.addEventListener("mousedown", () => {
+            cell.style.backgroundColor = "white"
+        })
         container.appendChild(cell).className = "grid-items";
+
     };
  });
-    
 
 
 
 
 
-// function grid() {
- 
-    
-// }
+
+
+
+
+
 
 
 
