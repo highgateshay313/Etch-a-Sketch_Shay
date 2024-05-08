@@ -24,9 +24,7 @@ gridBtn.addEventListener("click", (e) => {
         cell.addEventListener("mousemove", () => {
             cell.style.backgroundColor = "purple"
         })
-        cell.addEventListener("mousedown", () => {
-            cell.style.backgroundColor = "white"
-        })
+       
         container.appendChild(cell).className = "grid-items";
 
     };
