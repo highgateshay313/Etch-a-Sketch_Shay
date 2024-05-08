@@ -25,6 +25,7 @@ h1 {
     height: 10px;
     border: 1px solid black;
     color: white;
+    border: none;
 }
 
 /* .grid-items:hover{
