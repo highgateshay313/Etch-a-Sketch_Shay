@@ -1,7 +1,10 @@
 
+
+
 const container = document.querySelector(".container")
 const gridBtn = document.querySelector(".btn")
 let gridFlow = document.querySelectorAll(".grid-items")
+const deleted = document.querySelector("#delete")
 
 
 
@@ -29,6 +32,25 @@ gridBtn.addEventListener("click", (e) => {
 
     };
  });
+
+ function deleteGrid() {
+    while(container.hasChildNodes) {
+    container.removeChild(container.firstChild)
+  }
+}
+
+
+deleted.addEventListener("click", () => {
+    deleteGrid();
+})
+
+
+
+       
+
+
+
+
 
 
 
